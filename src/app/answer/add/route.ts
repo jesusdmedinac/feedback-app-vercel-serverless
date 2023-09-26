@@ -6,6 +6,14 @@ import { getFirestore } from "firebase/firestore";
 import { collection, doc, setDoc, getDocs } from "firebase/firestore"; 
 
 export async function POST(request: NextRequest) {
+  request.headers.set('Access-Control-Allow-Credentials', 'true');
+  request.headers.set('Access-Control-Allow-Origin', '*');
+  request.headers.set('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
+  request.headers.set(
+    'Access-Control-Allow-Headers',
+    'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+  );
+
   const firebaseConfig = {
     apiKey: "AIzaSyA-Tn8YHx3R9CZ9ct25DHnqiBTvv-2DmfE",
     authDomain: "fabricadecrepas-8d95a.firebaseapp.com",
