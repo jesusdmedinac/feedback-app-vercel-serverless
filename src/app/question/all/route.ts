@@ -27,18 +27,22 @@ export async function GET(request: NextRequest) {
     await setDoc(doc(questionsCollectionRef), {
       question: "¿Cómo calificaría la calidad y sabor de las crepas que degustó en nuestra crepería?",
       order: 1,
+      image: "1-question-image.png"
     });
     await setDoc(doc(questionsCollectionRef), {
       question: "¿Qué opinión le merece el servicio y la amabilidad del personal de \"Fábrica de Crepas\"?",
       order: 2,
+      image: "2-question-image.png"
     });
     await setDoc(doc(questionsCollectionRef), {
       question: "¿Cómo se sintió con respecto al ambiente y decoración de nuestro local?",
       order: 3,
+      image: "3-question-image.png"
     });
     await setDoc(doc(questionsCollectionRef), {
       question: "Considerando los precios y la calidad ofrecida, ¿cómo evaluaría la relación calidad-precio en \"Fábrica de Crepas\"?",
       order: 4,
+      image: "4-question-image.png"
     });
   }
   const questionAsData = (await getDocs(questionsCollectionRef))
