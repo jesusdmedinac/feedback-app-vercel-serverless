@@ -4,7 +4,7 @@ module.exports = {
   async headers() {
     return [
       {
-        source: "/src/app/:path*",
+        source: "/:path*",
         headers: [
           { key: "Access-Control-Allow-Credentials", value: "true" },
           { key: "Access-Control-Allow-Origin", value: "*" },
