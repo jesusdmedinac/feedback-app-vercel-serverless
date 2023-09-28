@@ -30,7 +30,7 @@ export async function GET(request: NextRequest) {
       image: "1-question-image.png"
     });
     await setDoc(doc(questionsCollectionRef), {
-      question: "¿Qué opinión le merece el servicio y la amabilidad del personal de \"Fábrica de Crepas\"?",
+      question: "¿Qué opinión le merece el servicio y la amabilidad del personal de Fábrica de Crepas?",
       order: 2,
       image: "2-question-image.png"
     });
@@ -40,7 +40,7 @@ export async function GET(request: NextRequest) {
       image: "3-question-image.png"
     });
     await setDoc(doc(questionsCollectionRef), {
-      question: "Considerando los precios y la calidad ofrecida, ¿cómo evaluaría la relación calidad-precio en \"Fábrica de Crepas\"?",
+      question: "Considerando los precios y la calidad ofrecida, ¿cómo evaluaría la relación calidad-precio en Fábrica de Crepas?",
       order: 4,
       image: "4-question-image.png"
     });
