@@ -27,25 +27,25 @@ export async function GET(request: NextRequest) {
     await setDoc(doc(pagesCollectionRef), {
       text: "¿Cómo calificaría la calidad y sabor de las crepas que degustó en nuestra crepería?",
       order: 1,
-      image: "https://firebasestorage.googleapis.com/v0/b/fabricadecrepas-8d95a.appspot.com/o/1-question-image.png?alt=media&token=b9f15716-3e7d-4b90-a75b-dd5100005ced",
+      image: "1-question-image.png",
       type: "QUESTION"
     });
     await setDoc(doc(pagesCollectionRef), {
       text: "¿Qué opinión le merece el servicio y la amabilidad del personal de Fábrica de Crepas?",
       order: 2,
-      image: "https://firebasestorage.googleapis.com/v0/b/fabricadecrepas-8d95a.appspot.com/o/2-question-image.png?alt=media&token=9fcc2272-8456-4f54-a6c7-dee89d0d3a3c",
+      image: "2-question-image.png",
       type: "QUESTION"
     });
     await setDoc(doc(pagesCollectionRef), {
       text: "¿Cómo se sintió con respecto al ambiente y decoración de nuestro local?",
       order: 3,
-      image: "https://firebasestorage.googleapis.com/v0/b/fabricadecrepas-8d95a.appspot.com/o/3-question-image.png?alt=media&token=fb78572d-106f-4519-916e-e84afbdbd848",
+      image: "3-question-image.png",
       type: "QUESTION"
     });
     await setDoc(doc(pagesCollectionRef), {
       text: "Considerando los precios y la calidad ofrecida, ¿cómo evaluaría la relación calidad-precio en Fábrica de Crepas?",
       order: 4,
-      image: "https://firebasestorage.googleapis.com/v0/b/fabricadecrepas-8d95a.appspot.com/o/4-question-image.png?alt=media&token=71f973c5-8e40-4495-bb20-caee16cc4de4",
+      image: "4-question-image.png",
       type: "QUESTION"
     });
     await setDoc(doc(pagesCollectionRef), {
