@@ -5,7 +5,7 @@ import { getPagesRef } from '@/app/data/feedback.remote.datasource';
 import pagesArray from '@/app/data/pages.json';
 
 export async function GET(request: NextRequest) {
-  const pagesRef = await getPagesRef();
+  const pagesRef = await getPagesRef(true);
   const pagesDocs = (await getDocs(pagesRef)).docs;
   
   if (pagesDocs.length == 0) {

@@ -7,7 +7,7 @@ export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
   const answerAsString = searchParams.get("answer") || "{}";
   const answer = JSON.parse(answerAsString);
-  const answersRef = await getAnswersRef();
+  const answersRef = await getAnswersRef(true);
   await setDoc(doc(answersRef), answer);
 
   return NextResponse.json(
