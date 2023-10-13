@@ -3,17 +3,10 @@ import { Firestore, getFirestore, CollectionReference } from "firebase/firestore
 import { collection } from "firebase/firestore"; 
 
 const initFeedbackRemoteDataSource = (): Firestore => {
-  const firebaseConfig = {
-    apiKey: "AIzaSyA-Tn8YHx3R9CZ9ct25DHnqiBTvv-2DmfE",
-    authDomain: "fabricadecrepas-8d95a.firebaseapp.com",
-    projectId: "fabricadecrepas-8d95a",
-    storageBucket: "fabricadecrepas-8d95a.appspot.com",
-    messagingSenderId: "392610741813",
-    appId: "1:392610741813:web:3f1deaba47d1ed46753b7c",
-    measurementId: "G-1HXLXF8WNG"
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
+  const firebaseConfig = process.env.FIREBASE_CONFIG || "";
+  const firebaseConfigAsString = Buffer.from(firebaseConfig, "base64").toString();
+  const firebaseConfigAsJSON = JSON.parse(firebaseConfigAsString);  
+  const app = initializeApp(firebaseConfigAsJSON);
   return getFirestore(app);
 };
 
